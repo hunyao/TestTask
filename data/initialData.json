@@ -1,0 +1,90 @@
+{
+  "Positions": [
+    {
+      "id": 1,
+      "name": "Full-stack engineer"
+    },
+    {
+      "id": 2,
+      "name": "Frontend developer"
+    },
+    {
+      "id": 3,
+      "name": "Backend developer"
+    },
+    {
+      "id": 4,
+      "name": "Designer"
+    },
+    {
+      "id": 5,
+      "name": "QA"
+    }
+  ],
+  "Users": [
+    {
+      "id": 1,
+      "name": "Вікторія",
+      "email": "vasil.romancenko@sereda.net.ua",
+      "phone": "+380976446145",
+      "url": "https://www.random-name-generator.com/images/faces/female-white/01.jpg",
+      "position": 1
+    },
+    {
+      "id": 2,
+      "name": "Ольга",
+      "email": "sevcuk.roman@i.ua",
+      "phone": "+380929547650",
+      "url": "https://www.random-name-generator.com/images/faces/female-white/02.jpg",
+      "position": 2
+    },
+    {
+      "id": 3,
+      "name": "Мирослав",
+      "email": "tetana.ivancenko@i.ua",
+      "phone": "+380986648295",
+      "url": "https://www.random-name-generator.com/images/faces/female-white/03.jpg",
+      "position": 3
+    },
+    {
+      "id": 4,
+      "name": "Кирил",
+      "email": "miroslav06@i.ua",
+      "phone": "+380960313125",
+      "url": "https://www.random-name-generator.com/images/faces/female-white/04.jpg",
+      "position": 4
+    },
+    {
+      "id": 5,
+      "name": "Григорій",
+      "email": "raisa.dmitrenko@bodnarenko.org.ua",
+      "phone": "+380930580604",
+      "url": "https://www.random-name-generator.com/images/faces/female-white/05.jpg",
+      "position": 5
+    },
+    {
+      "id": 6,
+      "name": "Олег",
+      "email": "romancenko.igor@ponomarcuk.com",
+      "phone": "+380927222802",
+      "url": "https://www.random-name-generator.com/images/faces/female-white/06.jpg",
+      "position": 2
+    },
+    {
+      "id": 7,
+      "name": "Оксана",
+      "email": "katerina59@ponomarenko.net.ua",
+      "phone": "+380989289557",
+      "url": "https://www.random-name-generator.com/images/faces/female-white/07.jpg",
+      "position": 3
+    },
+    {
+      "id": 8,
+      "name": "Вадим",
+      "email": "rpanasuk@gmail.com",
+      "phone": "+380956533982",
+      "url": "https://www.random-name-generator.com/images/faces/female-white/08.jpg",
+      "position": 4
+    }
+  ]
+}

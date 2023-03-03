@@ -1,0 +1,50 @@
+version: '3.8'
+services:
+  api:
+    image: 648281165308.dkr.ecr.us-east-1.amazonaws.com/testtask:latest
+    restart: always
+    depends_on:
+      - postgres
+    command: [ "./wait-for-it/wait-for-it.sh", "-s", "postgres:5432", "--", "npm", "start" ]
+    ports:
+      - "443:443"
+    environment:
+      NODE_ENV: development
+      DEBUG: nodejs-docker-express:*
+      PORT: 443
+      APP_TOKEN_EXPIRED_SECOND: 5
+      # APP_PROTOCOL: https
+      # APP_DOMAIN: testtask.kumoti.jp
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=testtask-dev
+    ports:
+      - "5432:5432"
+
+x-aws-cloudformation:
+  Resources:
+    ApiTCP443Listener:
+      Properties:
+        Certificates:
+          - CertificateArn: arn:aws:acm:us-east-1:648281165308:certificate/643bb8ca-d44b-4e77-b39d-2c6856491089
+        Protocol: TLS
+        Port: 443
+    Route53:
+      Type: AWS::Route53::RecordSet
+      Properties:
+        HostedZoneId: Z00846462XL20JYYKCHDX
+        Name: api.testtask.kumoti.jp.
+        Type: A
+        AliasTarget:
+          DNSName:
+            Fn::GetAtt:
+              - LoadBalancer
+              - DNSName
+          HostedZoneId:
+            Fn::GetAtt:
+              - LoadBalancer
+              - CanonicalHostedZoneID
